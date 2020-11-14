@@ -3,6 +3,12 @@
 <div class="jumbotron">
     <h1>GITHUB-SEARCH</h1>
 
+  <form action="" class="search">
+<div>
+    <input type="text" class="form-control" placeholder="search github users with users name"[(ngModel)]="username" (keyup)="findProfile()">
+</div>
+  </form>
+
 
     <div *ngIf="profile">
 

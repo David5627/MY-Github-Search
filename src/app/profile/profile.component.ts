@@ -9,7 +9,13 @@ import { from } from 'rxjs';
 export class ProfileComponent implements OnInit {
 profile:any[];
 repos:any;
+username:string;
   constructor(private profileSerrvice:ProfileService) {
+   
+   }
+   findProfile(){
+    this.profileSerrvice.updateProfile(this.username);
+
     this.profileSerrvice.getProfileInfo().subscribe(profile =>{
          
       console.log(profile);
@@ -22,8 +28,7 @@ repos:any;
       this.repos= repos;
  
     });
-   }
-
+  }
   ngOnInit(): void {
   }
 
