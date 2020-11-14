@@ -1,0 +1,68 @@
+
+
+<div class="jumbotron">
+    <h1>GITHUB-SEARCH</h1>
+
+
+    <div *ngIf="profile">
+
+        <link rel="stylesheet" href="./profile.component.css">
+        <div class="row">
+            <div class="col-md-4">
+               
+
+
+
+                <img src="{{profile.avatar_url}}" alt="profile Image">
+               <p class="text-center"> {{profile.login}}</p>
+                <ul class="List-group">
+                    <li class="List-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
+
+                </ul>
+                <p><span class="label label-default">Followers: {{profile.followers}} </span></p>
+                <p> <span class="label label-success"> Following: {{profile.following}}</span></p>
+                <p><span class="label label-default">Repos: {{profile.public_repos}} </span></p>
+                <button class="davy">
+                    <p><a href="{{profile.html_url}}" targe="blank" class="btn btn-successs btn-sm">view profile
+                            on github</a></p>
+                </button>
+            </div>
+
+
+
+
+
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1>Repos</h1>
+                        <div *ngFor='let repo of repos'>
+                            <div class="card">
+                                <h5 class="card-header">{{repo.name}}</h5>
+                                <div class="card-body">
+                                    <!-- <h5 class="card-title">{{repo.date}}</h5> -->
+                                    <p class="card-text">{{repo.description}}</p>
+                                    <a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">view
+                                        Repos in
+                                        github
+                                        on github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <!-- <div class="row">
+           
+
+
+        </div> -->
+
+
+
+        </div>
+    </div>
