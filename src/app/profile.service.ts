@@ -21,11 +21,11 @@ export class ProfileService {
   this.username = 'David5627'; 
   }
 getProfileInfo():Observable<any> {
-  return this.http.get("https://api.github.com/users/" + this.username +"?client_id=" + this.clientid +"&client_secret="+this.clientsecret)
+  return this.http.get("https://api.github.com/users/" + this.username +"?access_token=" + environment.myKey)
   .pipe(map(res => res));
 }
 getProfileRepos():Observable<any> {
-  return this.http.get("https://api.github.com/users/" + this.username +"/repos?client_id=" + this.clientid +"&client_secret="+this.clientsecret)
+  return this.http.get("https://api.github.com/users/" + this.username +"/repos?access_token=" + environment.myKey)
   .pipe(map(res => res));
 }
 updateProfile(username:string){
