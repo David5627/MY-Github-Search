@@ -31,4 +31,5 @@ getProfileRepos():Observable<any> {
 updateProfile(username:string){
 this.username = username;
 }
+
 }
