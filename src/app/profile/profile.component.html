@@ -1,26 +1,27 @@
-
-
 <div class="jumbotron">
     <h1>GITHUB-SEARCH</h1>
-
-  <form action="" class="search">
-<div>
-    <input type="text" class="form-control" placeholder="search github users with users name"[(ngModel)]="username" (keyup)="findProfile()">
-</div>
-  </form>
-
-
+    <div class="row">
+        <div class="col-md-6">
+            <form action="" class="search-form">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="search github users with users name"
+                        [(ngModel)] = "username" name = "username" (keyup)="findProfile()">
+                </div>
+            </form>
+            <h3>Automated github search App try search username on the above search bar and experience.</h3>
+        </div>
+    </div>
     <div *ngIf="profile">
 
         <link rel="stylesheet" href="./profile.component.css">
         <div class="row">
             <div class="col-md-4">
-               
+
 
 
 
                 <img src="{{profile.avatar_url}}" alt="profile Image">
-               <p class="text-center"> {{profile.login}}</p>
+                <p class="text-center"> {{profile.login}}</p>
                 <ul class="List-group">
                     <li class="List-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
 
@@ -49,9 +50,9 @@
                                     <!-- <h5 class="card-title">{{repo.date}}</h5> -->
                                     <p class="card-text">{{repo.description}}</p>
                                     <a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">view
-                                        Repos in
+                                        project on
                                         github
-                                        on github</a>
+                                        </a>
                                 </div>
                             </div>
                         </div>
