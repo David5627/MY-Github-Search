@@ -37,7 +37,4 @@ A Web page that shows life Quotes and life styles.
  
  * Davidkilonzo@2020
 
- 
- ## LICENCE
- 
- * Davidkilonzo@2020
+
