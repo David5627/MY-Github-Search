@@ -30,6 +30,19 @@ username:string;
     });
   }
   ngOnInit(): void {
+    this.profileService.updateProfile("David5627");
+    this.profileService.getProfileInfo().subscribe(profile =>{
+         
+      
+      this.profile = profile;
+ 
+    });
+    this.profileService.getProfileRepos().subscribe(repos =>{
+      
+     
+      this.repos= repos;
+ 
+    });
   }
 
 }
