@@ -11,6 +11,7 @@ describe('ProfileComponent', () => {
       declarations: [ ProfileComponent ]
     })
     .compileComponents();
+    
   });
 
   beforeEach(() => {
