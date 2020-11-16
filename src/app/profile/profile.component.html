@@ -1,27 +1,34 @@
 <div class="jumbotron">
     <h1>GITHUB-SEARCH</h1>
-    <div class="row">
-        <div class="col-md-6">
-            <form action="" class="search-form">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="search github users with users name"
-                        [(ngModel)] = "username" name = "username" (keyup)="findProfile()">
+    <h3>Automated github search App try search username on the above search bar and experience.</h3>
+
+
+    <div class="mike">
+        <nav class="navbar navbar-dark bg-dark" id="male">
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="" class="search-bar">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="search"
+                                [(ngModel)]="username" name="username" (keyup)="findProfile()">
+                        </div>
+                    </form>
                 </div>
-            </form>
-            <h3>Automated github search App try search username on the above search bar and experience.</h3>
-        </div>
+            </div>
+        </nav>
     </div>
+
+
+
+
     <div *ngIf="profile">
 
         <link rel="stylesheet" href="./profile.component.css">
         <div class="row">
             <div class="col-md-4">
-
-
-
-
                 <img src="{{profile.avatar_url}}" alt="profile Image">
                 <p class="text-center"> {{profile.login}}</p>
+
                 <ul>
                     <li class="List-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
 
@@ -39,9 +46,9 @@
 
 
 
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <h1>Repos</h1>
                         <div *ngFor='let repo of repos'>
                             <div class="card">
@@ -52,7 +59,7 @@
                                     <a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">view
                                         project on
                                         github
-                                        </a>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -63,13 +70,10 @@
 
 
             </div>
-            <!-- <div class="row">
-           
 
-
-        </div> -->
 
 
 
         </div>
     </div>
+</div>
